@@ -1,30 +1,26 @@
-package cn.bhcj.telling;
+package cn.bhcj.telling.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 
-import cn.bhcj.telling.activity.FirstActivity;
+import cn.bhcj.telling.MainActivity;
+import cn.bhcj.telling.R;
 
-public class MainActivity extends AppCompatActivity {
+public class FirstActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
+
+    private static final String TAG = "FirstActivity";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_first);
         Log.d(TAG,"onCreate");
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(view -> {
-            Intent intent = new Intent(MainActivity.this, FirstActivity.class);
-            startActivity(intent);
-        });
     }
 
     @Override
